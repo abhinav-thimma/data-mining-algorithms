@@ -27,13 +27,13 @@ def dissim_asymmetric(tup1, tup2):
     q,r,s,t = getConfusionMat(tup1, tup2)
     if(q+r+s+t == 0):
         return "NaN"
-    return float(r+s)/(q+r+s+t)
+    return float(r+s)/(q+r+s)
 
 def dissim_symmetric(tup1, tup2):
     q,r,s,t = getConfusionMat(tup1, tup2)
     if(q+r+s+t == 0):
         return "NaN"
-    return float(r+s+t)/(q+r+s+t)
+    return float(r+s)/(q+r+s+t)
 
 #function to print proximity matrix
 def printProxMatrix(data, function):
